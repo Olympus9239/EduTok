@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "218539377731",
+    "project_id": "edutok-a2490",
+    "storage_bucket": "edutok-a2490.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:218539377731:android:1d98753efb0cf0aeb840f6",
+        "android_client_info": {
+          "package_name": "com.example.tiktokclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "218539377731-5a7nd71kld4j5sroqs4nh4vnf0bbdmgv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuvpO7GbpjHWedIz4NEstml9UDd4XZyxg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "218539377731-5a7nd71kld4j5sroqs4nh4vnf0bbdmgv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
