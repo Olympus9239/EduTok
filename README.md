@@ -1,6 +1,6 @@
 # tiktokclone
 
-A new Flutter project.
+git branch -M main
 
 ## Getting Started
 

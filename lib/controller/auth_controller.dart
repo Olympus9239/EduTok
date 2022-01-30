@@ -6,6 +6,8 @@ import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:tiktokclone/constant.dart';
 import 'package:tiktokclone/models/user.dart' as model;
+import 'package:tiktokclone/views/screens/auth/home_screen.dart';
+import 'package:tiktokclone/views/screens/auth/login_screen.dart';
 
 class AuthController extends GetxController {
 
@@ -16,6 +18,23 @@ class AuthController extends GetxController {
    late  Rx<File?> _pickedImage;
    // using getter to get value of picked image to use elsewhere
   File? get profilePhoto=>_pickedImage.value;
+  // to persist state in app
+  late Rx<User?> _user;
+  @override
+  void onReady() {
+    // TODO: implement onReady
+    super.onReady();
+    _user=Rx<User?>(firebaseAuth.currentUser);
+    _user.bindStream(firebaseAuth.authStateChanges());
+    ever(_user,_setInitialScreen);
+  }
+  _setInitialScreen(User? user){
+      if(user==null){
+        Get.offAll(()=>LoginScreen());
+      }else{
+        Get.offAll(()=>HomeScreen());
+      }
+  }
   void pickImage()async{
   final pickImage=await ImagePicker().pickImage(source: ImageSource.gallery);
   if(pickImage!=null){
